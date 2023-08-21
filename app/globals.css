@@ -24,19 +24,5 @@ img {
   position: absolute;
 }
 
-#Contact form input[type="email"] {
-  top: 100px;
-  left: 200px;
-}
-
-#Contact form input[type="subject"] {
-  top: 200px;
-  left: 200px;
-}
-
-#Contact form textarea {
-  top: 300px;
-  left: 200px;
-}
 
 
