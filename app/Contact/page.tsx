@@ -1,6 +1,8 @@
-import Card from './Card/page'
+import React from 'react'
+import Contact from './contact'
 import Link from 'next/link'
-export default function Home() {
+
+export default function Page() {
   return (
     <nav>
       <div className="drawer">
@@ -21,7 +23,8 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <Card />
+
+          <Contact />
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
@@ -35,6 +38,5 @@ export default function Home() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
-
