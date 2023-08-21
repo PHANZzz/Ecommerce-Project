@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Footer from '../footer/footer'
 
 export default function Card() {
   return (
@@ -15,6 +16,7 @@ export default function Card() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }
