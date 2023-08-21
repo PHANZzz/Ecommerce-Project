@@ -16,7 +16,7 @@ export default function Card() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <div className='mt-12'><Footer/></div>
     </>
   )
 }
