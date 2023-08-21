@@ -19,5 +19,6 @@ img {
 #Contact {
   margin-left: 5%;
   width: 90%;
+  position: absolute;
 }
 
