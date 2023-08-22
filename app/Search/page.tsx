@@ -13,6 +13,7 @@ export default function Search() {
               
             </div>
             <input
+            autoFocus
               type="text"
               className="h-14 w-96 pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
               placeholder="Search anything..."
