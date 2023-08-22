@@ -7,7 +7,7 @@ export default function Search() {
     <>
       <div className="bg-gray-200 ">
         <div className="container h-screen flex justify-center">
-          <Link href="/"><div className='mt-5 mr-7'><FaArrowLeft /></div></Link>
+          <Link href="/"><div className='mt-5 mr-2'><FaArrowLeft /></div></Link>
           <div className="relative">
             <div className="absolute top-4 left-5">
               
