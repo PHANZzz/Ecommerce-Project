@@ -2,19 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-  border-radius: 10px;
-  margin-top: 10%;
 
-}
 .card {
   margin-left: 10%;
   margin-top: 20%;
-  background-color: rgb(84, 93, 90);
+  background-color: rgb(9, 163, 215);
 }
 .Price{
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(255, 0, 208);
+    font-family: sans-serif;
 }
 #Contact {
   margin-left: 5%;
