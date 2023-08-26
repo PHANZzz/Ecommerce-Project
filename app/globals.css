@@ -6,13 +6,14 @@
 .card {
   margin-left: 10%;
   margin-top: 20%;
-  background-color: rgb(9, 163, 215);
 }
-.Price{
-    font-size: 25px;
-    color: rgb(255, 0, 208);
-    font-family: sans-serif;
+.Price {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000;
 }
+
 #Contact {
   margin-left: 5%;
   width: 90%;
