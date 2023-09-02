@@ -7,7 +7,9 @@ export default function Search() {
       <div >
         <div className="w-3/4 ml-8">
           <div className="container h-screen flex justify-center">
-            <Link href="/"><div className=' mt-4 mr-6 w-2'><FaArrowLeft size={24} />
+            <Link href="/"><div className=' mt-2 mr-10 w-2'><svg width="60" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#000000" d="M13.293 6.293L7.586 12l5.707 5.707l1.414-1.414L10.414 12l4.293-4.293z"/>
+</svg>
             </div></Link>
             <div className="relative ">
               <div className="absolute top-4 left-5">
