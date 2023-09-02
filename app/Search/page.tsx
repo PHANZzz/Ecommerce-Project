@@ -4,8 +4,8 @@ import { FaSearch, FaArrowLeft } from 'react-icons/fa';
 export default function Search() {
   return (
     <>
-      <div className='mt-5 '>
-        <div className="mx">
+      <div >
+        <div className="w-3/4 ml-8">
           <div className="container h-screen flex justify-center">
             <Link href="/"><div className=' mt-4 mr-6 w-2'><FaArrowLeft size={24} />
             </div></Link>
@@ -23,6 +23,7 @@ export default function Search() {
               <div className="absolute top-5 left-4">
                 <FaSearch />
               </div>
+             
             </div>
           </div>
         </div>
