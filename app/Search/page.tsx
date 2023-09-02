@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaSearch, FaArrowLeft } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBackwardStep } from '@fortawesome/free-solid-svg-icons'
-
 export default function Search() {
   return (
     <>
       <div className='mt-5 '>
-        <div className="">
+        <div className="mx-autoc">
           <div className="container h-screen flex justify-center">
-            <Link href="/"><div className=' mt-4 mr-8 w-2'><FaArrowLeft size={24} />
+            <Link href="/"><div className=' mt-4 mr-6 w-2'><FaArrowLeft size={24} />
             </div></Link>
             <div className="relative ">
               <div className="absolute top-4 left-5">
