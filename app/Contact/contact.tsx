@@ -6,7 +6,7 @@ export default function Contact() {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (cdevent:any) => {
+  const handleSubmit = (event:any) => {
     event.preventDefault()
 
     fetch('https://spingframeworkwithmongodb-production.up.railway.app/UserPost', {
