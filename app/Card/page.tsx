@@ -12,19 +12,20 @@ interface Image {
 
 export default function ImageList() {
     const [images, setImages] = useState<Image[]>([]);
-
+    const [isLoading, setLoading] = useState(true);
     useEffect(() => {
         async function fetchImages() {
             const response = await fetch('https://list-images.vercel.app/');
             const images = await response.json();
             setImages(images);
+            setLoading(false);
         }
         fetchImages();
     }, []);
 
     return (
         <>
-            <div className='bg-violet-50 lg:flex'>
+            {isLoading === true ? <div className='flex justify-center items-center h-screen text-4xl '>Loading...</div> : <div className='bg-violet-50 lg:flex'>
                 {images.map((image) => (
                     <div key={image.name} className="card card-compact w-96 rounded-lg shadow-lg overflow-hidden bg-rose-300 ">
                         <figure style={{ backgroundImage: `url(https://source.unsplash.com/random)` }}>
@@ -41,9 +42,14 @@ export default function ImageList() {
 
 
                 ))}
-                
-            </div>
-            <div className='mt-12'><Footer /></div>
+
+            </div>}
+            {
+                isLoading === true ?null :
+                <div className='mt-12'>
+                    <Footer />
+                </div>  
+            }
         </>
 
     );
