@@ -5,7 +5,7 @@ export default function Search() {
   return (
     <>
       <div className='mt-5 '>
-        <div className="mx-autoc">
+        <div className="mx">
           <div className="container h-screen flex justify-center">
             <Link href="/"><div className=' mt-4 mr-6 w-2'><FaArrowLeft size={24} />
             </div></Link>
