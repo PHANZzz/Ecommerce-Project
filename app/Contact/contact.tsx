@@ -8,7 +8,7 @@ export default function Contact() {
   const [isLoading, setLoading] = useState(true)
   const handleSubmit = (event: any) => {
     event.preventDefault()
-
+    setLoading(false)
     fetch('https://spingframeworkwithmongodb-production.up.railway.app/UserPost', {
       method: 'POST',
       headers: {
@@ -22,7 +22,7 @@ export default function Contact() {
     })
       .then(response => response.json())
       .then(data => {
-        setLoading(false)
+        
       })
       .catch(error => {
         // handle the error
@@ -30,7 +30,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-white  " id='Contact'>
+    <section className="bg-white" id='Contact'>
       {
         isLoading === true ? null :
           <div className="alert alert-success justify-center items-center">
@@ -42,7 +42,7 @@ export default function Contact() {
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
           Contact Us
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
           Got a technical issue? Want to send feedback about a beta feature?
           Need details about our Business plan? Let us know.
         </p>
