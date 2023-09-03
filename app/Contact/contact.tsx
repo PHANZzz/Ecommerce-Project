@@ -5,8 +5,8 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
-
-  const handleSubmit = (event:any) => {
+  const [isLoading, setLoading] = useState(true)
+  const handleSubmit = (event: any) => {
     event.preventDefault()
 
     fetch('https://spingframeworkwithmongodb-production.up.railway.app/UserPost', {
@@ -20,18 +20,25 @@ export default function Contact() {
         message
       })
     })
-    .then(response => response.json())
-    .then(data => {
-      // handle the response
-    })
-    .catch(error => {
-      // handle the error
-    });
+      .then(response => response.json())
+      .then(data => {
+        setLoading(false)
+      })
+      .catch(error => {
+        // handle the error
+      });
   }
 
   return (
     <section className="bg-white  " id='Contact'>
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      {
+        isLoading === true ? null :
+          <div className="alert alert-success justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>Your purchase has been confirmed!</span>
+          </div>
+      }
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md z-0">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
           Contact Us
         </h2>
