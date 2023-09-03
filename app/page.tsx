@@ -2,7 +2,7 @@ import Card from './Card/page'
 import Link from 'next/link'
 export default function Home() {
   return (
-    <nav>
+    <nav >
       <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-base-200 font-extrabold  bg-lime-300">
+          <ul className="menu p-4 w-80 h-full bg-base-200 font-extrabold">
             <Link href="/"><li><a>Home</a></li></Link>
             <Link href="/Contact"><li><a>Contact Us</a></li></Link>
 
