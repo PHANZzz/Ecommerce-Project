@@ -1,14 +1,24 @@
 "use client"
 import React, { useState } from 'react'
+import Alert from '../alertContact/page'
 
 export default function Contact() {
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [isLoading, setLoading] = useState(true)
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState(false);
+
   const handleSubmit = (event: any) => {
     event.preventDefault()
-    setLoading(false)
+    setTimeout(() => {
+      setAlert(true);
+    }, 500);
+    
+    setTimeout(() => {
+      window.location.href= '/';
+    }, 1500);
+
+
     fetch('https://spingframeworkwithmongodb-production.up.railway.app/UserPost', {
       method: 'POST',
       headers: {
@@ -22,7 +32,7 @@ export default function Contact() {
     })
       .then(response => response.json())
       .then(data => {
-
+        
       })
       .catch(error => {
         // handle the error
@@ -30,11 +40,8 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-white" id='Contact'>
-      {isLoading === true ? null : <div className="alert alert-success mt-8 z-10 relative">
-        <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-        <span >Thank you for contact us!</span>
-      </div>} 
+    <section className="bg-white" id='Contact relative'>
+      {alert === false ? null : <Alert/>} 
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md z-0 absulote">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
           Contact Us

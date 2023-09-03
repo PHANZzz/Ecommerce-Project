@@ -22,7 +22,7 @@ export default function Home() {
                   </Link>
               </div>
             </div>
-            <div className="flex-none hidden lg:block">
+            <div className="flex-none hidden lg:block ">
               <ul className="menu menu-horizontal font-bold">
                 <Link href="/"><li><a>Home</a></li></Link>
                 <Link href="/Contact"><li><a>Contact Us</a></li></Link>
@@ -31,9 +31,9 @@ export default function Home() {
           </div>
           <Card />
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side ">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-base-200 font-extrabold">
+          <ul className="menu p-4 w-80 h-full bg-base-200 font-extrabold bg-lime-300">
             <Link href="/"><li><a>Home</a></li></Link>
             <Link href="/Contact"><li><a>Contact Us</a></li></Link>
 
